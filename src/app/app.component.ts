@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ISClassname } from './interfaces/student.interface';
+import {IClassroom} from "./interfaces/classroom.interface";
 
 @Component({
   selector: 'app-root',
@@ -7,27 +7,11 @@ import { ISClassname } from './interfaces/student.interface';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demoAJS';
-  StdRCLR:ISClassname[]=[
-    {
-      classname:"T2204M",
-      classStatus:"Hoat dong"
-    },
-    {
-      classname:"T2456S",
-      classStatus:"nghi"
-    },
-    {
-      classname:"T2876A",
-      classStatus:"Hoat dong"
-    },
-    {
-      classname:"T2467J",
-      classStatus:"nghi"
-    },
-    {
-      classname:"T28789E",
-      classStatus:"Hoat dong"
-    }
-  ]
+  title = 'T2204M-Angular';
+
+  classGroup: IClassroom[] = [
+    {className: 'T2204M',classStatus: true},
+    {className: 'T2205M',classStatus: false},
+    {className: 'T2206M',classStatus: true},
+  ];
 }
